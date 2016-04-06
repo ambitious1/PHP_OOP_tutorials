@@ -1,19 +1,11 @@
 <?php
-	require 'Collection.php';
-	
-	$grp = new Collection();
-	
-	$grp->add('apple');
-	$grp->add('oranges');
-	$grp->add('banana');
+	require 'TalkInterface.php'; //must go first
+	require 'Dog.php';
+	require 'Cat.php';
 	
 	
-	//What to perform a count() method to count the elements in list, but since there is
-	//echo count($grp); 
-	//1 object assigned to $grp, it equals 1, instead of counting the items in the collection
-	//You must use the Countable interface	
+	$cat = new Cat();
+	$dog = new Dog();
 	
-	echo $grp->toJson().'<br>';
-	echo count($grp).'<br>';
-	echo json_encode($grp); //we need to implement the JsonSerialize interface
+	echo $cat->talk() . '<br>' . $dog->talk();
 ?>
