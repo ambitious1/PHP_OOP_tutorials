@@ -1,12 +1,9 @@
 <?php
-	require 'Bird.php';
-	require 'Pigeon.php';
-	require 'Penguin.php';
-		
-	$pigeon = new Penguin(false, 2);
+	require 'Chest.php';
+	require 'Lock.php';
 	
-	echo $pigeon->getLegCount();
-	/*if ($pigeon->canFly) {
-		echo 'The Pigeon can Fly';	
-	}*/
+	$chest = new Chest(new Lock);
+	$chest->close();
+	
+	
 ?>
