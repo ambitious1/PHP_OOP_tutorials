@@ -1,9 +1,8 @@
 <?php
-	require 'Kiwi.php';
+	require 'Apples.php';
 	
+	$blah = new Apples();
 	
-	//Doesn't require to be instantiated with the new keyword
-	echo Kiwi::hello();//Similar to the scope operator but only works for static methods and and variables
-	echo Kiwi::$var;
-	//echo Kiwi::$var2 //won't work because it is not a static property  	
+	//Method chaining
+	$blah->bar()->baz();
 ?>
